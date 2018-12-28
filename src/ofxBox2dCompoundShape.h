@@ -48,7 +48,6 @@ public:
     };
     
     void setup( b2World* aworld, glm::vec2 aworldPos );
-    void setup( b2World* aworld, glm::vec2 aworldPos, vector<ofxBox2dCompoundShape::Shape> ashapes );
     void addRect( ofxBox2dCompoundShape::Rectangle aLocalRect );
     void addRect( ofRectangle aLocalRect );
     void addRect( float ax, float ay, float aw, float ah );

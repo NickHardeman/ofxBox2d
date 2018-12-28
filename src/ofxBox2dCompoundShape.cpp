@@ -8,12 +8,6 @@
 
 //--------------------------------------------------------------
 void ofxBox2dCompoundShape::setup(b2World* aworld, glm::vec2 aworldPos ) {
-    vector<ofxBox2dCompoundShape::Shape> tshapes;
-    setup( aworld, aworldPos, tshapes );
-}
-
-//--------------------------------------------------------------
-void ofxBox2dCompoundShape::setup( b2World* aworld, glm::vec2 aworldPos, vector<ofxBox2dCompoundShape::Shape> ashapes ) {
     if(aworld == NULL) {
         ofLog(OF_LOG_NOTICE, "- must have a valid world -");
         return;
@@ -25,10 +19,6 @@ void ofxBox2dCompoundShape::setup( b2World* aworld, glm::vec2 aworldPos, vector<
     bodyDef.position.Set(aworldPos.x/OFX_BOX2D_SCALE, aworldPos.y/OFX_BOX2D_SCALE);
     
     body = aworld->CreateBody(&bodyDef);
-    
-    for( int i = 0; i < ashapes.size(); i++ ) {
-        
-    }
 }
 
 //--------------------------------------------------------------
